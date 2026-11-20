@@ -1,0 +1,61 @@
+topic,label,top_words,type,period,n,share
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Ryokan,All years,1958,23.5
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Ryokan,2005-2019,1257,23.0
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Ryokan,2020-2022,39,24.4
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Ryokan,2023-2026,662,24.5
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Hotel,All years,3630,24.1
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Hotel,2005-2019,2541,24.1
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Hotel,2020-2022,174,20.6
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Hotel,2023-2026,915,25.0
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Hybrid,All years,454,28.0
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Hybrid,2005-2019,58,26.0
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Hybrid,2020-2022,19,32.7
+0,General praise,"great, helpful, service, recommend, breakfast, location, excellent, friendly, nice, clean",Hybrid,2023-2026,377,28.1
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Ryokan,All years,1958,10.3
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Ryokan,2005-2019,1257,11.1
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Ryokan,2020-2022,39,12.5
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Ryokan,2023-2026,662,8.6
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Hotel,All years,3630,19.9
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Hotel,2005-2019,2541,21.4
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Hotel,2020-2022,174,17.2
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Hotel,2023-2026,915,16.5
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Hybrid,All years,454,9.0
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Hybrid,2005-2019,58,9.0
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Hybrid,2020-2022,19,9.9
+1,Location and surroundings,"walk, location, area, locate, garden, great, nice, city, quiet, excellent",Hybrid,2023-2026,377,9.0
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Ryokan,All years,1958,32.3
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Ryokan,2005-2019,1257,25.7
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Ryokan,2020-2022,39,38.5
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Ryokan,2023-2026,662,44.4
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Hotel,All years,3630,18.0
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Hotel,2005-2019,2541,14.8
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Hotel,2020-2022,174,27.2
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Hotel,2023-2026,915,25.0
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Hybrid,All years,454,32.8
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Hybrid,2005-2019,58,29.1
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Hybrid,2020-2022,19,27.1
+2,Memorable experience,"experience, make, amaze, beautiful, best, dinner, service, wonderful, time, place",Hybrid,2023-2026,377,33.6
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Ryokan,All years,1958,24.9
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Ryokan,2005-2019,1257,29.4
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Ryokan,2020-2022,39,18.5
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Ryokan,2023-2026,662,16.7
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Hotel,All years,3630,8.8
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Hotel,2005-2019,2541,9.4
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Hotel,2020-2022,174,8.3
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Hotel,2023-2026,915,7.3
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Hybrid,All years,454,22.3
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Hybrid,2005-2019,58,25.7
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Hybrid,2020-2022,19,16.9
+3,Traditional stay,"bath, breakfast, traditional, tea, night, dinner, bed, bathroom, day, small",Hybrid,2023-2026,377,22.1
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Ryokan,All years,1958,9.1
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Ryokan,2005-2019,1257,10.9
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Ryokan,2020-2022,39,6.1
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Ryokan,2023-2026,662,5.8
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Hotel,All years,3630,29.2
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Hotel,2005-2019,2541,30.4
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Hotel,2020-2022,174,26.7
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Hotel,2023-2026,915,26.3
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Hybrid,All years,454,7.9
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Hybrid,2005-2019,58,10.2
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Hybrid,2020-2022,19,13.4
+4,Transactions and problems,"service, time, night, breakfast, day, check, make, like, book, say",Hybrid,2023-2026,377,7.2

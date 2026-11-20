@@ -1,0 +1,11 @@
+pandas
+numpy
+scipy
+statsmodels
+scikit-learn
+vaderSentiment
+gensim
+nltk
+textblob
+tabulate
+matplotlib

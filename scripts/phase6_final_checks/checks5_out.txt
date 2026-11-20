@@ -1,0 +1,32 @@
+== 1. Rating difference: mean of Ryokan property means minus mean of Hotel property means
+main: +0.231; exact p = 6/35 = 0.171
+two Nazuna properties counted as Ryokans (six and three): +0.263; exact p = 5/84 = 0.060
+   leaving out Four Seasons Hotl Kyoto      +0.251
+   leaving out Hyatt Regency Kyoto          +0.199
+   leaving out Kyokoyado Muromachi Yutone   +0.177
+   leaving out Nishiyama Ryokan             +0.298
+   leaving out Parkhyatt                    +0.244
+   leaving out Ryokufuso                    +0.279
+   leaving out Shiraume                     +0.171
+mixed model with period control: +0.238 (standard error 0.113)
+review-level means, up to 2019: Ryokan 4.71, Hotel 4.53
+review-level means, 2023 onward: Ryokan 4.97, Hotel 4.54
+
+== 2. Review-level effect size
+Ryokan 4.801, Hotel 4.539, gap 0.263; pooled SD 0.766; Cohen's d = 0.343
+
+== 3. Crowding language (reviews in the order of the raw files, as in phase5 location.py)
+share of reviews describing crowding, mean of property shares: {'Hotel': 6.2, 'Hybrid': 1.2, 'Ryokan': 1.8}
+   Ryokan and Hotel properties: exact p = 1/35 = 0.029; ranges 0.9-2.5 and 5.1-7.6
+   all ten properties, property fixed effects: -0.361 (95% CI -0.491, -0.232)
+   all ten properties, property fixed effects and review length: -0.252 (95% CI -0.383, -0.121)
+   all ten properties, property fixed effects, review length and refuge language: -0.254 (95% CI -0.385, -0.123)
+   seven comparison properties, property fixed effects: -0.371 (95% CI -0.503, -0.239)
+   seven comparison properties, property fixed effects and review length: -0.260 (95% CI -0.393, -0.126)
+   seven comparison properties, property fixed effects, review length and refuge language: -0.261 (95% CI -0.394, -0.128)
+Hotels: crowding in peak months 6.6% vs other months 5.7%; odds ratio 1.18; chi-square p = 0.25
+   logistic: odds ratio 1.18, p = 0.25
+   logistic with property: odds ratio 1.17, p = 0.28
+   Hotels, 2005-2019: 5.9% of 2541 reviews
+   Hotels, 2023-2026: 6.3% of 915 reviews
+   2023-2026 vs 2005-2019: chi-square p = 0.63

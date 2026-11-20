@@ -1,0 +1,22 @@
+predictor,predictor_label,outcome,outcome_label,n,spearman,p
+dist_gion_kiyomizu_m,Distance to Gion / Kiyomizu,mean,Mean rating,10,0.22,0.535
+dist_gion_kiyomizu_m,Distance to Gion / Kiyomizu,low_share,Share rated three stars or fewer,10,-0.35,0.334
+dist_gion_kiyomizu_m,Distance to Gion / Kiyomizu,location_positive,Positive share of location mentions,10,-0.27,0.45
+dist_gion_kiyomizu_m,Distance to Gion / Kiyomizu,location_negative,Negative share of location mentions,10,0.55,0.104
+dist_gion_kiyomizu_m,Distance to Gion / Kiyomizu,crowd_exposed,Reviews describing crowds,10,-0.55,0.107
+dist_gion_kiyomizu_m,Distance to Gion / Kiyomizu,crowd_refuge,Reviews describing a refuge from crowds,10,-0.45,0.188
+dist_gion_kiyomizu_m,Distance to Gion / Kiyomizu,peak_effect,Peak-season change in rating,10,-0.06,0.874
+dist_nearest_m,Distance to nearest busy sight,mean,Mean rating,10,-0.42,0.231
+dist_nearest_m,Distance to nearest busy sight,low_share,Share rated three stars or fewer,10,0.24,0.513
+dist_nearest_m,Distance to nearest busy sight,location_positive,Positive share of location mentions,10,-0.68,0.035
+dist_nearest_m,Distance to nearest busy sight,location_negative,Negative share of location mentions,10,0.54,0.112
+dist_nearest_m,Distance to nearest busy sight,crowd_exposed,Reviews describing crowds,10,0.35,0.329
+dist_nearest_m,Distance to nearest busy sight,crowd_refuge,Reviews describing a refuge from crowds,10,-0.05,0.885
+dist_nearest_m,Distance to nearest busy sight,peak_effect,Peak-season change in rating,10,-0.18,0.623
+dist_station_m,Distance to Kyoto Station,mean,Mean rating,10,0.32,0.371
+dist_station_m,Distance to Kyoto Station,low_share,Share rated three stars or fewer,10,-0.26,0.47
+dist_station_m,Distance to Kyoto Station,location_positive,Positive share of location mentions,10,0.34,0.333
+dist_station_m,Distance to Kyoto Station,location_negative,Negative share of location mentions,10,-0.16,0.654
+dist_station_m,Distance to Kyoto Station,crowd_exposed,Reviews describing crowds,10,-0.27,0.451
+dist_station_m,Distance to Kyoto Station,crowd_refuge,Reviews describing a refuge from crowds,10,-0.01,0.992
+dist_station_m,Distance to Kyoto Station,peak_effect,Peak-season change in rating,10,0.35,0.309

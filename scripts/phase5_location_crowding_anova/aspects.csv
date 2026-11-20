@@ -1,0 +1,71 @@
+property,type,aspect,mention_share,positive_share,negative_share,n_mentions
+Four Seasons Kyoto,Hotel,Staff & service,87.4,85.6,5.0,646
+Hyatt Regency Kyoto,Hotel,Staff & service,86.5,90.6,3.8,2181
+Muromachi Yutone,Ryokan,Staff & service,80.1,95.9,0.0,145
+Nazuna Gosho,Hybrid,Staff & service,86.1,95.1,1.4,142
+Nazuna Nijo-jo,Hybrid,Staff & service,91.9,95.0,0.6,159
+Nishiyama Ryokan,Ryokan,Staff & service,86.5,93.9,2.2,489
+Park Hyatt Kyoto,Hotel,Staff & service,84.1,80.4,5.8,311
+Ryokufuso,Ryokan,Staff & service,91.9,95.2,1.3,396
+Shiraume,Ryokan,Staff & service,91.0,92.5,1.1,711
+The Junei Hotel,Hybrid,Staff & service,83.6,93.8,2.1,97
+Four Seasons Kyoto,Hotel,Room,68.3,87.5,4.2,505
+Hyatt Regency Kyoto,Hotel,Room,80.2,84.2,6.5,2022
+Muromachi Yutone,Ryokan,Room,77.3,91.4,1.4,140
+Nazuna Gosho,Hybrid,Room,70.9,85.5,2.6,117
+Nazuna Nijo-jo,Hybrid,Room,75.7,86.3,1.5,131
+Nishiyama Ryokan,Ryokan,Room,80.2,84.5,3.8,453
+Park Hyatt Kyoto,Hotel,Room,68.9,84.3,3.9,255
+Ryokufuso,Ryokan,Room,80.0,87.2,2.3,345
+Shiraume,Ryokan,Room,68.6,88.6,1.9,536
+The Junei Hotel,Hybrid,Room,81.0,91.5,2.1,94
+Four Seasons Kyoto,Hotel,Dining,65.6,82.9,8.2,485
+Hyatt Regency Kyoto,Hotel,Dining,69.1,81.8,7.1,1741
+Muromachi Yutone,Ryokan,Dining,85.1,94.2,0.0,154
+Nazuna Gosho,Hybrid,Dining,66.7,84.5,2.7,110
+Nazuna Nijo-jo,Hybrid,Dining,71.1,89.4,2.4,123
+Nishiyama Ryokan,Ryokan,Dining,68.7,85.3,3.6,388
+Park Hyatt Kyoto,Hotel,Dining,55.7,87.4,5.3,206
+Ryokufuso,Ryokan,Dining,57.8,83.1,4.0,249
+Shiraume,Ryokan,Dining,89.6,91.6,1.1,700
+The Junei Hotel,Hybrid,Dining,58.6,76.5,8.8,68
+Four Seasons Kyoto,Hotel,Location,43.3,71.9,7.5,320
+Hyatt Regency Kyoto,Hotel,Location,70.5,75.2,6.8,1778
+Muromachi Yutone,Ryokan,Location,38.7,77.1,5.7,70
+Nazuna Gosho,Hybrid,Location,30.3,84.0,4.0,50
+Nazuna Nijo-jo,Hybrid,Location,28.9,84.0,6.0,50
+Nishiyama Ryokan,Ryokan,Location,63.9,81.4,4.4,361
+Park Hyatt Kyoto,Hotel,Location,61.4,78.4,3.1,227
+Ryokufuso,Ryokan,Location,57.1,68.3,8.1,246
+Shiraume,Ryokan,Location,57.5,86.6,0.9,449
+The Junei Hotel,Hybrid,Location,36.2,64.3,11.9,42
+Four Seasons Kyoto,Hotel,Culture,47.1,85.3,2.3,348
+Hyatt Regency Kyoto,Hotel,Culture,27.7,77.2,4.3,698
+Muromachi Yutone,Ryokan,Culture,66.3,93.3,0.0,120
+Nazuna Gosho,Hybrid,Culture,47.9,83.5,1.3,79
+Nazuna Nijo-jo,Hybrid,Culture,52.6,86.8,2.2,91
+Nishiyama Ryokan,Ryokan,Culture,67.6,83.8,1.8,382
+Park Hyatt Kyoto,Hotel,Culture,29.5,86.2,3.7,109
+Ryokufuso,Ryokan,Culture,47.6,81.0,2.0,205
+Shiraume,Ryokan,Culture,52.4,88.8,1.2,409
+The Junei Hotel,Hybrid,Culture,25.9,90.0,3.3,30
+Four Seasons Kyoto,Hotel,Bath,36.8,86.0,3.3,272
+Hyatt Regency Kyoto,Hotel,Bath,18.2,72.2,12.0,460
+Muromachi Yutone,Ryokan,Bath,44.8,86.4,4.9,81
+Nazuna Gosho,Hybrid,Bath,43.0,76.1,0.0,71
+Nazuna Nijo-jo,Hybrid,Bath,40.5,84.3,1.4,70
+Nishiyama Ryokan,Ryokan,Bath,51.5,82.5,2.4,291
+Park Hyatt Kyoto,Hotel,Bath,15.7,69.0,17.2,58
+Ryokufuso,Ryokan,Bath,60.3,84.2,2.7,260
+Shiraume,Ryokan,Bath,31.9,81.1,2.0,249
+The Junei Hotel,Hybrid,Bath,38.8,95.6,0.0,45
+Four Seasons Kyoto,Hotel,Value & price,23.7,69.7,16.6,175
+Hyatt Regency Kyoto,Hotel,Value & price,32.1,71.0,10.6,809
+Muromachi Yutone,Ryokan,Value & price,10.5,89.5,0.0,19
+Nazuna Gosho,Hybrid,Value & price,10.9,77.8,5.6,18
+Nazuna Nijo-jo,Hybrid,Value & price,9.8,76.5,17.6,17
+Nishiyama Ryokan,Ryokan,Value & price,26.5,77.3,6.7,150
+Park Hyatt Kyoto,Hotel,Value & price,21.6,75.0,7.5,80
+Ryokufuso,Ryokan,Value & price,21.6,75.3,9.7,93
+Shiraume,Ryokan,Value & price,26.6,82.7,5.3,208
+The Junei Hotel,Hybrid,Value & price,8.6,70.0,30.0,10

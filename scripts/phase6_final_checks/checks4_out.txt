@@ -1,0 +1,12 @@
+all: {'staff_service': np.float64(0.242), 'culture': np.float64(0.145), 'dining': np.float64(0.125), 'bath': np.float64(0.102), 'location': np.float64(0.058), 'room': np.float64(0.058), 'value_price': np.float64(-0.103)}
+without Shiraume                     top: staff_service +0.271 | second: culture +0.178
+without Parkhyatt                    top: staff_service +0.240 | second: culture +0.136
+without Four Seasons Hotl Kyoto      top: staff_service +0.238 | second: culture +0.138
+without Hyatt Regency Kyoto          top: staff_service +0.211 | second: culture +0.120
+without Kyokoyado Muromachi Yutone   top: staff_service +0.250 | second: culture +0.149
+without Nishiyama Ryokan             top: staff_service +0.236 | second: culture +0.140
+without Ryokufuso                    top: staff_service +0.232 | second: culture +0.148
+Ryokan [('staff_service', np.float64(0.176)), ('culture', np.float64(0.077)), ('bath', np.float64(0.054))]
+Hotel [('staff_service', np.float64(0.27)), ('culture', np.float64(0.198)), ('dining', np.float64(0.173))]
+
+Review-level rating gap: Ryokan 4.801 vs Hotel 4.539 = 0.263 stars; pooled SD 0.766; Cohen's d = 0.343

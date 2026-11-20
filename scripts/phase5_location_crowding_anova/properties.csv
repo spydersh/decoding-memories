@@ -1,0 +1,11 @@
+property,type,n,mean,ci_lo,ci_hi,sd,low_share
+Shiraume,Ryokan,781,4.985,4.975,4.994,0.133,0.1
+Muromachi Yutone,Ryokan,181,4.967,4.941,4.993,0.18,0.0
+Nazuna Gosho,Hybrid,165,4.927,4.878,4.977,0.323,0.6
+Nazuna Nijo-jo,Hybrid,173,4.873,4.787,4.959,0.577,2.9
+The Junei Hotel,Hybrid,116,4.828,4.725,4.93,0.564,3.4
+Ryokufuso,Ryokan,431,4.661,4.603,4.72,0.619,5.3
+Four Seasons Kyoto,Hotel,739,4.612,4.546,4.677,0.913,10.7
+Nishiyama Ryokan,Ryokan,565,4.602,4.539,4.665,0.762,6.7
+Park Hyatt Kyoto,Hotel,370,4.597,4.494,4.701,1.013,11.4
+Hyatt Regency Kyoto,Hotel,2521,4.509,4.476,4.541,0.821,9.9

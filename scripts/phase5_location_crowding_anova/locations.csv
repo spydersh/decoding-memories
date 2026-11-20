@@ -1,0 +1,11 @@
+property,type,lat,lon,n,mean,low_share,nearest_hotspot,dist_nearest_m,dist_gion_kiyomizu_m,dist_station_m,hotspots_within_1500m,location_mention,location_positive,location_negative,crowd_share,crowd_exposed,crowd_refuge,peak_mean,offpeak_mean,peak_effect
+Shiraume,Ryokan,35.0052348,135.7733233,781,4.985,0.1,Yasaka Shrine (Gion),508,508,2531,3,57.5,86.6,0.9,2.8,1.4,1.4,4.993,4.98,0.013
+Muromachi Yutone,Ryokan,34.998366,135.7575024,181,4.967,0.0,Nishiki Market,990,2006,1397,2,38.7,77.1,5.7,2.8,2.2,1.1,4.975,4.96,0.015
+Ryokufuso,Ryokan,34.9945107,135.7554024,431,4.661,5.3,Kyoto Station,1011,2341,1011,2,57.1,68.3,8.1,1.4,0.9,0.5,4.604,4.687,-0.082
+Nishiyama Ryokan,Ryokan,35.0131089,135.7662971,565,4.602,6.7,Nishiki Market,910,1533,3108,1,63.9,81.4,4.4,3.4,2.5,0.9,4.637,4.579,0.058
+Hyatt Regency Kyoto,Hotel,34.9882626,135.7728336,2521,4.509,9.9,Kiyomizu-dera,1291,1291,1309,2,70.5,75.2,6.8,7.2,6.0,1.4,4.47,4.53,-0.06
+Four Seasons Kyoto,Hotel,34.9902288,135.7761797,739,4.612,10.7,Kiyomizu-dera,917,917,1659,1,43.3,71.9,7.5,6.6,5.1,1.6,4.476,4.68,-0.204
+Park Hyatt Kyoto,Hotel,34.9991121,135.7811268,370,4.597,11.4,Yasaka Shrine (Gion),557,557,2515,2,61.4,78.4,3.1,11.1,7.6,4.3,4.632,4.573,0.058
+Nazuna Gosho,Hybrid,35.0158832,135.7571696,165,4.927,0.6,Nijo Castle,822,2375,3343,2,30.3,84.0,4.0,1.8,1.8,0.0,4.963,4.91,0.053
+Nazuna Nijo-jo,Hybrid,35.0147086,135.7534847,173,4.873,2.9,Nijo Castle,467,2593,3245,2,28.9,84.0,6.0,0.6,0.0,0.6,4.792,4.938,-0.145
+The Junei Hotel,Hybrid,35.0212696,135.7524325,116,4.828,3.4,Nijo Castle,883,3081,3981,1,36.2,64.3,11.9,2.6,1.7,1.7,4.838,4.823,0.015

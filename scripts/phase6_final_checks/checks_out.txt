@@ -1,0 +1,142 @@
+== 1. Exact permutation tests (two-sided on |difference in property means|; 35 assignments)
+Rating    R 4.8036 H 4.5725 diff +0.2311 | two-sided p = 6/35 = 0.171 | one-sided 0.057 | overlap
+top       R 0.8481 H 0.7624 diff +0.0857 | two-sided p = 15/35 = 0.429 | one-sided 0.229 | overlap
+low       R 0.0305 H 0.1065 diff -0.0761 | two-sided p = 2/35 = 0.057 | one-sided 0.029 | complete
+s_mean    R 0.4614 H 0.3920 diff +0.0694 | two-sided p = 1/35 = 0.029 | one-sided 0.029 | complete
+textblob  R 0.3376 H 0.3354 diff +0.0022 | two-sided p = 33/35 = 0.943 | one-sided 0.429 | overlap
+rec       R 0.3018 H 0.2029 diff +0.0989 | two-sided p = 1/35 = 0.029 | one-sided 0.029 | complete
+ret       R 0.1501 H 0.1206 diff +0.0296 | two-sided p = 10/35 = 0.286 | one-sided 0.171 | overlap
+mem       R 0.0960 H 0.0716 diff +0.0244 | two-sided p = 32/35 = 0.914 | one-sided 0.486 | overlap
+dining         salience: R 0.753 H 0.635 p=0.257 overlap | sentiment: R 0.522 H 0.456 p=0.171 overlap | negshare: R 0.022 H 0.069 p=0.029 complete
+bath           salience: R 0.471 H 0.236 p=0.086 overlap | sentiment: R 0.502 H 0.418 p=0.229 overlap | negshare: R 0.030 H 0.108 p=0.057 overlap
+room           salience: R 0.766 H 0.725 p=0.400 overlap | sentiment: R 0.495 H 0.466 p=0.400 overlap | negshare: R 0.023 H 0.049 p=0.057 complete
+staff_service  salience: R 0.874 H 0.860 p=0.686 overlap | sentiment: R 0.626 H 0.501 p=0.029 complete | negshare: R 0.012 H 0.048 p=0.029 complete
+location       salience: R 0.543 H 0.584 p=0.657 overlap | sentiment: R 0.433 H 0.385 p=0.457 overlap | negshare: R 0.048 H 0.058 p=0.657 overlap
+value_price    salience: R 0.213 H 0.258 p=0.486 overlap | sentiment: R 0.395 H 0.321 p=0.029 complete | negshare: R 0.054 H 0.116 p=0.114 overlap
+culture        salience: R 0.585 H 0.347 p=0.057 complete | sentiment: R 0.518 H 0.498 p=0.686 overlap | negshare: R 0.013 H 0.034 p=0.029 complete
+
+== 2. H3 mixed models: 95% intervals for every specification
+Main, all years, peak = Mar Apr Oct Nov [n=5588]
+   hotel peak -0.075 (-0.126, -0.024) p=0.004
+   ryokan peak +0.005 (-0.064, +0.075) p=0.884
+   interaction +0.080 (-0.006, +0.167) p=0.070
+Peak = Apr and Nov [n=5588]
+   hotel peak -0.102 (-0.165, -0.039) p=0.001
+   ryokan peak -0.005 (-0.090, +0.080) p=0.905
+   interaction +0.097 (-0.009, +0.202) p=0.072
+2023 onward [n=1577]
+   hotel peak -0.144 (-0.250, -0.038) p=0.008
+   ryokan peak +0.002 (-0.119, +0.123) p=0.972
+   interaction +0.146 (-0.014, +0.307) p=0.074
+Up to 2019 [n=3798]
+   hotel peak -0.076 (-0.136, -0.016) p=0.012
+   ryokan peak -0.002 (-0.087, +0.084) p=0.971
+   interaction +0.075 (-0.030, +0.179) p=0.161
+Outcome: review sentiment (VADER) [n=5588]
+   hotel peak -0.005 (-0.018, +0.009) p=0.497
+   ryokan peak +0.009 (-0.009, +0.028) p=0.309
+   interaction +0.014 (-0.009, +0.037) p=0.222
+             size   mean
+tier   peak             
+Hotel  0     2330  4.566
+       1     1300  4.490
+Ryokan 0     1234  4.797
+       1      724  4.809
+Property-level peak-season change (peak mean minus off-peak mean) and exact test:
+peak                                   0      1    chg   0_n  1_n
+prop                       tier                                  
+Four Seasons Hotl Kyoto    Hotel   4.680  4.476 -0.204   491  248
+Hyatt Regency Kyoto        Hotel   4.530  4.470 -0.060  1621  900
+Kyokoyado Muromachi Yutone Ryokan  4.960  4.975  0.015   100   81
+Nishiyama Ryokan           Ryokan  4.579  4.637  0.058   342  223
+Parkhyatt                  Hotel   4.573  4.632  0.058   218  152
+Ryokufuso                  Ryokan  4.687  4.604 -0.082   297  134
+Shiraume                   Ryokan  4.980  4.993  0.013   495  286
+   ryokan mean change +0.001, hotel mean change -0.069, diff +0.070; two-sided exact p = 15/35; one-sided 9/35
+   [Apr+Nov] changes: Four Seasons -0.236, Hyatt Regenc -0.074, Kyokoyado Mu +0.007, Nishiyama Ry -0.012, Parkhyatt -0.038, Ryokufuso -0.016, Shiraume +0.010 | diff +0.113; two-sided exact p = 1/35
+   [2023+] changes: Four Seasons -0.395, Hyatt Regenc -0.139, Kyokoyado Mu +0.011, Nishiyama Ry +0.051, Parkhyatt -0.013, Ryokufuso -0.063, Shiraume +0.000 | diff +0.182; two-sided exact p = 2/35
+
+== 3. H1: staff-and-service versus room
+Pooled: reward staff-room +0.184 (95% CI +0.116, +0.252) p=1.1e-07 | penalty staff-room -0.046 (95% CI -0.349, +0.257) p=0.77
+    dining         reward +0.125 (+0.085, +0.165) p=0.000 | penalty -0.424 (-0.572, -0.276) p=0.000 | n_pos 3331 n_neg 206
+    bath           reward +0.102 (+0.063, +0.141) p=0.000 | penalty -0.236 (-0.447, -0.024) p=0.029 | n_pos 1337 n_neg 97
+    room           reward +0.058 (+0.016, +0.099) p=0.006 | penalty -0.726 (-0.904, -0.549) p=0.000 | n_pos 3646 n_neg 200
+    staff_service  reward +0.242 (+0.188, +0.296) p=0.000 | penalty -0.772 (-0.991, -0.553) p=0.000 | n_pos 4412 n_neg 157
+    location       reward +0.058 (+0.022, +0.094) p=0.002 | penalty -0.173 (-0.312, -0.034) p=0.014 | n_pos 2650 n_neg 196
+    value_price    reward -0.103 (-0.153, -0.052) p=0.000 | penalty -0.466 (-0.650, -0.281) p=0.000 | n_pos 1131 n_neg 151
+    culture        reward +0.145 (+0.109, +0.180) p=0.000 | penalty +0.049 (-0.192, +0.291) p=0.689 | n_pos 1891 n_neg 58
+Ryokan: reward staff-room +0.163 (95% CI +0.069, +0.256) p=0.00065 | penalty staff-room -0.065 (95% CI -0.775, +0.645) p=0.86
+    dining         reward +0.008 (-0.045, +0.060) p=0.773 | penalty -0.500 (-0.825, -0.176) p=0.002 | n_pos 1324 n_neg 32
+    bath           reward +0.054 (+0.008, +0.100) p=0.023 | penalty -0.119 (-0.452, +0.215) p=0.486 | n_pos 731 n_neg 23
+    room           reward +0.013 (-0.032, +0.058) p=0.561 | penalty -0.689 (-1.114, -0.264) p=0.001 | n_pos 1287 n_neg 37
+    staff_service  reward +0.176 (+0.100, +0.253) p=0.000 | penalty -0.754 (-1.255, -0.253) p=0.003 | n_pos 1633 n_neg 24
+    location       reward +0.003 (-0.041, +0.046) p=0.910 | penalty +0.033 (-0.154, +0.220) p=0.731 | n_pos 905 n_neg 44
+    value_price    reward -0.123 (-0.185, -0.060) p=0.000 | penalty -0.680 (-1.140, -0.219) p=0.004 | n_pos 375 n_neg 30
+    culture        reward +0.077 (+0.034, +0.119) p=0.000 | penalty +0.062 (-0.294, +0.418) p=0.734 | n_pos 961 n_neg 16
+Hotel: reward staff-room +0.194 (95% CI +0.103, +0.285) p=2.7e-05 | penalty staff-room -0.031 (95% CI -0.368, +0.306) p=0.86
+    dining         reward +0.173 (+0.120, +0.226) p=0.000 | penalty -0.383 (-0.549, -0.217) p=0.000 | n_pos 2007 n_neg 174
+    bath           reward +0.142 (+0.082, +0.202) p=0.000 | penalty -0.270 (-0.524, -0.015) p=0.038 | n_pos 606 n_neg 74
+    room           reward +0.076 (+0.017, +0.134) p=0.012 | penalty -0.720 (-0.916, -0.524) p=0.000 | n_pos 2359 n_neg 163
+    staff_service  reward +0.270 (+0.200, +0.340) p=0.000 | penalty -0.751 (-0.995, -0.506) p=0.000 | n_pos 2779 n_neg 133
+    location       reward +0.087 (+0.036, +0.138) p=0.001 | penalty -0.216 (-0.384, -0.048) p=0.012 | n_pos 1745 n_neg 152
+    value_price    reward -0.106 (-0.176, -0.037) p=0.003 | penalty -0.402 (-0.604, -0.199) p=0.000 | n_pos 756 n_neg 121
+    culture        reward +0.198 (+0.145, +0.250) p=0.000 | penalty +0.042 (-0.263, +0.346) p=0.789 | n_pos 930 n_neg 42
+Leave one property out (pooled model):
+   without Shiraume                     reward diff +0.209 (p=1.2e-07) | penalty diff -0.022 (p=0.89)
+   without Parkhyatt                    reward diff +0.185 (p=1.7e-07) | penalty diff -0.091 (p=0.56)
+   without Four Seasons Hotl Kyoto      reward diff +0.200 (p=5.2e-08) | penalty diff -0.058 (p=0.73)
+   without Hyatt Regency Kyoto          reward diff +0.138 (p=0.0018) | penalty diff +0.133 (p=0.63)
+   without Kyokoyado Muromachi Yutone   reward diff +0.193 (p=8e-08) | penalty diff -0.023 (p=0.88)
+   without Nishiyama Ryokan             reward diff +0.171 (p=2.2e-06) | penalty diff -0.067 (p=0.67)
+   without Ryokufuso                    reward diff +0.173 (p=1.6e-06) | penalty diff -0.059 (p=0.71)
+Within each property separately (no fixed effects needed):
+   Four Seasons Hotl Kyoto      n=  739 staff reward +0.244 room reward +0.189 diff +0.055 p=0.582
+   Hyatt Regency Kyoto          n= 2521 staff reward +0.273 room reward +0.041 diff +0.231 p=0.000
+   Kyokoyado Muromachi Yutone   n=  181 staff reward +0.029 room reward +0.057 diff -0.028 p=0.616
+   Nishiyama Ryokan             n=  565 staff reward +0.284 room reward -0.034 diff +0.318 p=0.014
+   Parkhyatt                    n=  370 staff reward +0.256 room reward +0.037 diff +0.220 p=0.154
+   Ryokufuso                    n=  431 staff reward +0.388 room reward +0.025 diff +0.363 p=0.005
+   Shiraume                     n=  781 staff reward +0.016 room reward -0.008 diff +0.023 p=0.283
+   positive in 6 of 7 properties; two-sided sign test p = 0.125; mean of property contrasts +0.169, t-test p = 0.026
+rec: staff OR 1.37 (1.13, 1.65) | room OR 0.87 (0.75, 1.01) | contrast p=0.00033
+     leave-one-out staff OR range 1.15 to 1.46; max p 0.270
+mem: staff OR 1.51 (1.08, 2.10) | room OR 0.64 (0.50, 0.82) | contrast p=9.1e-05
+     leave-one-out staff OR range 1.42 to 1.89; max p 0.058
+ret: staff OR 1.10 (0.87, 1.37) | room OR 1.08 (0.89, 1.31) | contrast p=0.94
+     leave-one-out staff OR range 1.07 to 1.14; max p 0.596
+
+== 4. Aspect attribution: sentences that mention one aspect only
+sentences: 49909; with at least one aspect: 31559 (63.2%); of these, one aspect only: 72.0%; two or more: 28.0%
+   dining         sentences   7740; single-aspect share 51.4%
+   bath           sentences   2358; single-aspect share 39.7%
+   room           sentences   9944; single-aspect share 54.5%
+   staff_service  sentences   9876; single-aspect share 60.9%
+   location       sentences   6641; single-aspect share 63.7%
+   value_price    sentences   2263; single-aspect share 44.7%
+   culture        sentences   3723; single-aspect share 30.5%
+Pooled: single-aspect: reward staff-room +0.113 (95% CI +0.061, +0.165) p=2.4e-05; penalty diff -0.121 p=0.43; adjR2 0.261 | all sentences: +0.184, adjR2 0.289
+    dining         reward +0.129* penalty -0.558* (n_neg 167) | all: reward +0.125* penalty -0.424*
+    bath           reward +0.100* penalty -0.300* (n_neg 62) | all: reward +0.102* penalty -0.236*
+    room           reward +0.038  penalty -0.957* (n_neg 197) | all: reward +0.058* penalty -0.726*
+    staff_service  reward +0.151* penalty -1.078* (n_neg 124) | all: reward +0.242* penalty -0.772*
+    location       reward +0.080* penalty -0.169* (n_neg 158) | all: reward +0.058* penalty -0.173*
+    value_price    reward -0.111* penalty -0.649* (n_neg 83) | all: reward -0.103* penalty -0.466*
+    culture        reward +0.119* penalty -0.390  (n_neg 22) | all: reward +0.145* penalty +0.049 
+Ryokan: single-aspect: reward staff-room +0.089 (95% CI +0.021, +0.157) p=0.01; penalty diff +0.249 p=0.46; adjR2 0.251 | all sentences: +0.163, adjR2 0.295
+    dining         reward +0.048* penalty -0.181  (n_neg 24) | all: reward +0.008  penalty -0.500*
+    bath           reward +0.034  penalty -0.243  (n_neg 12) | all: reward +0.054* penalty -0.119 
+    room           reward +0.014  penalty -0.979* (n_neg 38) | all: reward +0.013  penalty -0.689*
+    staff_service  reward +0.103* penalty -0.730* (n_neg 21) | all: reward +0.176* penalty -0.754*
+    location       reward +0.011  penalty -0.007  (n_neg 32) | all: reward +0.003  penalty +0.033 
+    value_price    reward -0.052  penalty -0.990* (n_neg 17) | all: reward -0.123* penalty -0.680*
+    culture        reward +0.059* penalty -0.454  (n_neg 7) | all: reward +0.077* penalty +0.062 
+Hotel: single-aspect: reward staff-room +0.133 (95% CI +0.061, +0.204) p=0.00028; penalty diff -0.189 p=0.27; adjR2 0.248 | all sentences: +0.194, adjR2 0.274
+    dining         reward +0.165* penalty -0.606* (n_neg 143) | all: reward +0.173* penalty -0.383*
+    bath           reward +0.150* penalty -0.311* (n_neg 50) | all: reward +0.142* penalty -0.270*
+    room           reward +0.048  penalty -0.933* (n_neg 159) | all: reward +0.076* penalty -0.720*
+    staff_service  reward +0.181* penalty -1.123* (n_neg 103) | all: reward +0.270* penalty -0.751*
+    location       reward +0.113* penalty -0.202* (n_neg 126) | all: reward +0.087* penalty -0.216*
+    value_price    reward -0.150* penalty -0.552* (n_neg 66) | all: reward -0.106* penalty -0.402*
+    culture        reward +0.178* penalty -0.371  (n_neg 15) | all: reward +0.198* penalty +0.042 
+culture reward, ryokan minus hotel (all sentences): -0.081 (95% CI -0.146, -0.016) p=0.014
+culture reward, ryokan minus hotel (single-aspect): -0.084 (95% CI -0.156, -0.012) p=0.021

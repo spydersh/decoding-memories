@@ -1,0 +1,197 @@
+type,polarity,aspect_a,aspect_b,lift,n_both,share_of_a
+Ryokan,pos,Staff & service,Staff & service,,1633,
+Ryokan,pos,Staff & service,Room,1.03,1107,67.8
+Ryokan,pos,Staff & service,Dining,1.03,1133,69.4
+Ryokan,pos,Staff & service,Location,1.03,780,47.8
+Ryokan,pos,Staff & service,Culture,1.03,826,50.6
+Ryokan,pos,Staff & service,Bath,1.02,624,38.2
+Ryokan,pos,Staff & service,Value & price,0.97,304,18.6
+Ryokan,pos,Room,Staff & service,1.03,1107,86.0
+Ryokan,pos,Room,Room,,1287,
+Ryokan,pos,Room,Dining,1.06,921,71.6
+Ryokan,pos,Room,Location,1.14,679,52.8
+Ryokan,pos,Room,Culture,1.12,706,54.9
+Ryokan,pos,Room,Bath,1.25,603,46.9
+Ryokan,pos,Room,Value & price,1.08,266,20.7
+Ryokan,pos,Dining,Staff & service,1.03,1133,85.6
+Ryokan,pos,Dining,Room,1.06,921,69.6
+Ryokan,pos,Dining,Dining,,1324,
+Ryokan,pos,Dining,Location,1.1,672,50.8
+Ryokan,pos,Dining,Culture,1.12,730,55.1
+Ryokan,pos,Dining,Bath,1.01,499,37.7
+Ryokan,pos,Dining,Value & price,1.1,278,21.0
+Ryokan,pos,Location,Staff & service,1.03,780,86.2
+Ryokan,pos,Location,Room,1.14,679,75.0
+Ryokan,pos,Location,Dining,1.1,672,74.3
+Ryokan,pos,Location,Location,,905,
+Ryokan,pos,Location,Culture,1.08,481,53.1
+Ryokan,pos,Location,Bath,1.15,388,42.9
+Ryokan,pos,Location,Value & price,1.19,207,22.9
+Ryokan,pos,Culture,Staff & service,1.03,826,86.0
+Ryokan,pos,Culture,Room,1.12,706,73.5
+Ryokan,pos,Culture,Dining,1.12,730,76.0
+Ryokan,pos,Culture,Location,1.08,481,50.1
+Ryokan,pos,Culture,Culture,,961,
+Ryokan,pos,Culture,Bath,1.17,420,43.7
+Ryokan,pos,Culture,Value & price,1.09,200,20.8
+Ryokan,pos,Bath,Staff & service,1.02,624,85.4
+Ryokan,pos,Bath,Room,1.25,603,82.5
+Ryokan,pos,Bath,Dining,1.01,499,68.3
+Ryokan,pos,Bath,Location,1.15,388,53.1
+Ryokan,pos,Bath,Culture,1.17,420,57.5
+Ryokan,pos,Bath,Bath,,731,
+Ryokan,pos,Bath,Value & price,1.16,162,22.2
+Ryokan,pos,Value & price,Staff & service,0.97,304,81.1
+Ryokan,pos,Value & price,Room,1.08,266,70.9
+Ryokan,pos,Value & price,Dining,1.1,278,74.1
+Ryokan,pos,Value & price,Location,1.19,207,55.2
+Ryokan,pos,Value & price,Culture,1.09,200,53.3
+Ryokan,pos,Value & price,Bath,1.16,162,43.2
+Ryokan,pos,Value & price,Value & price,,375,
+Ryokan,neg,Staff & service,Staff & service,,24,
+Ryokan,neg,Staff & service,Room,11.02,5,20.8
+Ryokan,neg,Staff & service,Dining,12.75,5,20.8
+Ryokan,neg,Staff & service,Location,5.56,3,12.5
+Ryokan,neg,Staff & service,Culture,20.4,4,16.7
+Ryokan,neg,Staff & service,Bath,3.55,1,4.2
+Ryokan,neg,Staff & service,Value & price,5.44,2,8.3
+Ryokan,neg,Room,Staff & service,11.02,5,13.5
+Ryokan,neg,Room,Room,,37,
+Ryokan,neg,Room,Dining,9.92,6,16.2
+Ryokan,neg,Room,Location,7.22,6,16.2
+Ryokan,neg,Room,Culture,13.23,4,10.8
+Ryokan,neg,Room,Bath,9.2,4,10.8
+Ryokan,neg,Room,Value & price,10.58,6,16.2
+Ryokan,neg,Dining,Staff & service,12.75,5,15.6
+Ryokan,neg,Dining,Room,9.92,6,18.8
+Ryokan,neg,Dining,Dining,,32,
+Ryokan,neg,Dining,Location,5.56,4,12.5
+Ryokan,neg,Dining,Culture,22.95,6,18.8
+Ryokan,neg,Dining,Bath,2.66,1,3.1
+Ryokan,neg,Dining,Value & price,8.16,4,12.5
+Ryokan,neg,Location,Staff & service,5.56,3,6.8
+Ryokan,neg,Location,Room,7.22,6,13.6
+Ryokan,neg,Location,Dining,5.56,4,9.1
+Ryokan,neg,Location,Location,,44,
+Ryokan,neg,Location,Culture,2.78,1,2.3
+Ryokan,neg,Location,Bath,1.93,1,2.3
+Ryokan,neg,Location,Value & price,1.48,1,2.3
+Ryokan,neg,Culture,Staff & service,20.4,4,25.0
+Ryokan,neg,Culture,Room,13.23,4,25.0
+Ryokan,neg,Culture,Dining,22.95,6,37.5
+Ryokan,neg,Culture,Location,2.78,1,6.2
+Ryokan,neg,Culture,Culture,,16,
+Ryokan,neg,Culture,Bath,10.64,2,12.5
+Ryokan,neg,Culture,Value & price,4.08,1,6.2
+Ryokan,neg,Bath,Staff & service,3.55,1,4.3
+Ryokan,neg,Bath,Room,9.2,4,17.4
+Ryokan,neg,Bath,Dining,2.66,1,4.3
+Ryokan,neg,Bath,Location,1.93,1,4.3
+Ryokan,neg,Bath,Culture,10.64,2,8.7
+Ryokan,neg,Bath,Bath,,23,
+Ryokan,neg,Bath,Value & price,2.84,1,4.3
+Ryokan,neg,Value & price,Staff & service,5.44,2,6.7
+Ryokan,neg,Value & price,Room,10.58,6,20.0
+Ryokan,neg,Value & price,Dining,8.16,4,13.3
+Ryokan,neg,Value & price,Location,1.48,1,3.3
+Ryokan,neg,Value & price,Culture,4.08,1,3.3
+Ryokan,neg,Value & price,Bath,2.84,1,3.3
+Ryokan,neg,Value & price,Value & price,,30,
+Hotel,pos,Staff & service,Staff & service,,2779,
+Hotel,pos,Staff & service,Room,1.06,1921,69.1
+Hotel,pos,Staff & service,Dining,1.09,1674,60.2
+Hotel,pos,Staff & service,Location,1.08,1437,51.7
+Hotel,pos,Staff & service,Culture,1.07,764,27.5
+Hotel,pos,Staff & service,Bath,1.04,482,17.3
+Hotel,pos,Staff & service,Value & price,1.04,602,21.7
+Hotel,pos,Room,Staff & service,1.06,1921,81.4
+Hotel,pos,Room,Room,,2359,
+Hotel,pos,Room,Dining,1.13,1468,62.2
+Hotel,pos,Room,Location,1.11,1260,53.4
+Hotel,pos,Room,Culture,1.2,728,30.9
+Hotel,pos,Room,Bath,1.24,490,20.8
+Hotel,pos,Room,Value & price,1.15,563,23.9
+Hotel,pos,Dining,Staff & service,1.09,1674,83.4
+Hotel,pos,Dining,Room,1.13,1468,73.1
+Hotel,pos,Dining,Dining,,2007,
+Hotel,pos,Dining,Location,1.12,1084,54.0
+Hotel,pos,Dining,Culture,1.2,616,30.7
+Hotel,pos,Dining,Bath,1.23,411,20.5
+Hotel,pos,Dining,Value & price,1.27,529,26.4
+Hotel,pos,Location,Staff & service,1.08,1437,82.3
+Hotel,pos,Location,Room,1.11,1260,72.2
+Hotel,pos,Location,Dining,1.12,1084,62.1
+Hotel,pos,Location,Location,,1745,
+Hotel,pos,Location,Culture,1.16,519,29.7
+Hotel,pos,Location,Bath,1.06,309,17.7
+Hotel,pos,Location,Value & price,1.29,470,26.9
+Hotel,pos,Culture,Staff & service,1.07,764,82.2
+Hotel,pos,Culture,Room,1.2,728,78.3
+Hotel,pos,Culture,Dining,1.2,616,66.2
+Hotel,pos,Culture,Location,1.16,519,55.8
+Hotel,pos,Culture,Culture,,930,
+Hotel,pos,Culture,Bath,1.53,238,25.6
+Hotel,pos,Culture,Value & price,1.23,239,25.7
+Hotel,pos,Bath,Staff & service,1.04,482,79.5
+Hotel,pos,Bath,Room,1.24,490,80.9
+Hotel,pos,Bath,Dining,1.23,411,67.8
+Hotel,pos,Bath,Location,1.06,309,51.0
+Hotel,pos,Bath,Culture,1.53,238,39.3
+Hotel,pos,Bath,Bath,,606,
+Hotel,pos,Bath,Value & price,1.28,162,26.7
+Hotel,pos,Value & price,Staff & service,1.04,602,79.6
+Hotel,pos,Value & price,Room,1.15,563,74.5
+Hotel,pos,Value & price,Dining,1.27,529,70.0
+Hotel,pos,Value & price,Location,1.29,470,62.2
+Hotel,pos,Value & price,Culture,1.23,239,31.6
+Hotel,pos,Value & price,Bath,1.28,162,21.4
+Hotel,pos,Value & price,Value & price,,756,
+Hotel,neg,Staff & service,Staff & service,,133,
+Hotel,neg,Staff & service,Room,6.53,39,29.3
+Hotel,neg,Staff & service,Dining,6.74,43,32.3
+Hotel,neg,Staff & service,Location,3.23,18,13.5
+Hotel,neg,Staff & service,Culture,3.9,6,4.5
+Hotel,neg,Staff & service,Bath,3.32,9,6.8
+Hotel,neg,Staff & service,Value & price,5.86,26,19.5
+Hotel,neg,Room,Staff & service,6.53,39,23.9
+Hotel,neg,Room,Room,,163,
+Hotel,neg,Room,Dining,3.33,26,16.0
+Hotel,neg,Room,Location,2.78,19,11.7
+Hotel,neg,Room,Culture,5.83,11,6.7
+Hotel,neg,Room,Bath,5.12,17,10.4
+Hotel,neg,Room,Value & price,5.52,30,18.4
+Hotel,neg,Dining,Staff & service,6.74,43,24.7
+Hotel,neg,Dining,Room,3.33,26,14.9
+Hotel,neg,Dining,Dining,,174,
+Hotel,neg,Dining,Location,3.02,22,12.6
+Hotel,neg,Dining,Culture,2.98,6,3.4
+Hotel,neg,Dining,Bath,1.97,7,4.0
+Hotel,neg,Dining,Value & price,3.62,21,12.1
+Hotel,neg,Location,Staff & service,3.23,18,11.8
+Hotel,neg,Location,Room,2.78,19,12.5
+Hotel,neg,Location,Dining,3.02,22,14.5
+Hotel,neg,Location,Location,,152,
+Hotel,neg,Location,Culture,5.69,10,6.6
+Hotel,neg,Location,Bath,3.55,11,7.2
+Hotel,neg,Location,Value & price,2.37,12,7.9
+Hotel,neg,Culture,Staff & service,3.9,6,14.3
+Hotel,neg,Culture,Room,5.83,11,26.2
+Hotel,neg,Culture,Dining,2.98,6,14.3
+Hotel,neg,Culture,Location,5.69,10,23.8
+Hotel,neg,Culture,Culture,,42,
+Hotel,neg,Culture,Bath,4.67,4,9.5
+Hotel,neg,Culture,Value & price,0.71,1,2.4
+Hotel,neg,Bath,Staff & service,3.32,9,12.2
+Hotel,neg,Bath,Room,5.12,17,23.0
+Hotel,neg,Bath,Dining,1.97,7,9.5
+Hotel,neg,Bath,Location,3.55,11,14.9
+Hotel,neg,Bath,Culture,4.67,4,5.4
+Hotel,neg,Bath,Bath,,74,
+Hotel,neg,Bath,Value & price,1.62,4,5.4
+Hotel,neg,Value & price,Staff & service,5.86,26,21.5
+Hotel,neg,Value & price,Room,5.52,30,24.8
+Hotel,neg,Value & price,Dining,3.62,21,17.4
+Hotel,neg,Value & price,Location,2.37,12,9.9
+Hotel,neg,Value & price,Culture,0.71,1,0.8
+Hotel,neg,Value & price,Bath,1.62,4,3.3
+Hotel,neg,Value & price,Value & price,,121,

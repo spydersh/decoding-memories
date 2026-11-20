@@ -1,0 +1,346 @@
+<meta name="dash-one-writer">
+<style>
+  .dm-page { display: flex; flex-direction: column; gap: var(--cds-gap-xl, 32px); max-width: 980px; margin: 0 auto; color: var(--color-fg); font-family: var(--dm-font-sans); }
+  .dm-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm, 8px); }
+  .dm-eyebrow { font-size: var(--cds-font-size-caption); letter-spacing: .08em; text-transform: uppercase; color: var(--color-fg-muted); margin: 0; }
+  .dm-title { font-family: var(--dm-font-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .dm-lede { font-size: var(--cds-font-size-heading); line-height: 1.45; margin: 0; max-width: 62ch; text-wrap: pretty; }
+  .dm-lede b, .dm-note b, .dm-read b { font-weight: var(--cds-font-weight-medium, 500); font-variant-numeric: tabular-nums; }
+  .dm-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; max-width: 76ch; line-height: 1.5; }
+  .dm-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid var(--color-border-line); padding-bottom: 10px; }
+  .dm-tab { font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); background: transparent; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  .dm-tab:hover { color: var(--color-fg); }
+  .dm-tab:focus-visible, .dm-controls select:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+  .dm-tab[aria-selected="true"] { color: var(--color-bg); background: var(--color-fg); border-color: var(--color-fg); }
+  .dm-view { display: flex; flex-direction: column; gap: var(--cds-gap-xl, 32px); }
+  .dm-viewhead { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 8px 20px; }
+  .dm-question { font-family: var(--dm-font-serif); font-weight: 400; font-size: var(--cds-font-size-heading); margin: 0; max-width: 60ch; text-wrap: balance; }
+  .dm-sec { display: flex; flex-direction: column; gap: var(--cds-gap-md, 12px); min-width: 0; }
+  .dm-sec-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--cds-gap-sm, 8px) var(--cds-gap-lg, 20px); }
+  .dm-h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium, 500); margin: 0; text-wrap: balance; }
+  .dm-kicker { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0 0 2px; letter-spacing: .06em; text-transform: uppercase; }
+  .dm-read { font-size: var(--cds-font-size-body); line-height: 1.55; margin: 0; max-width: 72ch; }
+  .dm-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius, 8px); padding: var(--cds-pad-lg, 16px); min-width: 0; display: flex; flex-direction: column; gap: var(--cds-gap-sm, 8px); }
+  .dm-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .dm-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .dm-sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+  .dm-sw-sq { border-radius: 2px; background: var(--color-fg-muted); transform: rotate(45deg); width: 8px; height: 8px; }
+  .dm-chart { position: relative; width: 100%; min-width: 0; }
+  .dm-chart svg { display: block; width: 100%; overflow: visible; }
+  .dm-chart text { font-family: var(--dm-font-sans); font-size: var(--cds-font-size-caption); fill: var(--cds-text-secondary, var(--color-fg-muted)); font-variant-numeric: tabular-nums; }
+  .dm-chart text.dm-strong { fill: var(--color-fg); }
+  .dm-chart text.dm-bold { fill: var(--color-fg); font-weight: var(--cds-font-weight-medium, 500); }
+  .dm-chart .dm-grid { stroke: var(--cds-chart-grid, var(--color-border-line)); stroke-width: 1; }
+  .dm-chart .dm-axis { stroke: var(--cds-chart-axis, var(--color-border-line)); stroke-width: 1; }
+  .dm-chart .dm-ref { stroke: var(--cds-chart-reference, var(--color-fg-muted)); stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+  .dm-chart .dm-band { fill: var(--color-fg-muted); opacity: .09; }
+  .dm-chart .dm-hit { fill: transparent; cursor: default; }
+  .dm-h-dots { min-height: 342px; } .dm-h-heat { min-height: 370px; } .dm-h-arc { min-height: 300px; } .dm-h-bars { min-height: 358px; }
+  .dm-h-md { min-height: 320px; } .dm-h-lg { min-height: 420px; } .dm-h-sm { min-height: 154px; } .dm-h-co { min-height: 268px; } .dm-h-cr { min-height: 240px; }
+  .dm-empty { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); padding: 24px 0; }
+  .dm-tip { position: absolute; z-index: 5; pointer-events: none; background: var(--cds-surface-popover, var(--color-bg)); border: 1px solid var(--cds-border, var(--color-border-line)); box-shadow: var(--cds-shadow-popover, 0 4px 16px rgba(0,0,0,.12)); border-radius: var(--cds-radius, 8px); padding: 8px 10px; font-size: var(--cds-font-size-caption); line-height: 1.45; color: var(--color-fg); max-width: 250px; font-variant-numeric: tabular-nums; }
+  .dm-tip-title { font-weight: var(--cds-font-weight-medium, 500); }
+  .dm-tip-sub { color: var(--cds-text-secondary, var(--color-fg-muted)); }
+  .dm-tablewrap { overflow-x: auto; }
+  .dm-table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .dm-table th { text-align: left; font-weight: var(--cds-font-weight-medium, 500); color: var(--color-fg-muted); padding: 6px 12px 6px 0; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .dm-table td { padding: 7px 12px 7px 0; border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+  .dm-table td.dm-num, .dm-table th.dm-num { text-align: right; white-space: nowrap; }
+  .dm-pill { display: inline-block; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--color-border-line); white-space: nowrap; }
+  .dm-pill.dm-yes { border-color: var(--color-ok); } .dm-pill.dm-no { border-color: var(--color-warn); }
+  .dm-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .dm-controls label { display: inline-flex; align-items: center; gap: 6px; }
+  .dm-controls select { max-width: 100%; }
+  .dm-details { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.55; }
+  .dm-details summary { cursor: pointer; color: var(--color-fg); }
+  .dm-details p { margin: 8px 0 0; max-width: 78ch; }
+  [data-dash-source-state=refreshing] { opacity: .5; }
+</style>
+
+<div class="dm-page">
+  <header class="dm-head" id="top">
+    <p class="dm-eyebrow">Decoding Memories 1.0</p>
+    <h1 class="dm-title" id="title">Ryokans and luxury hotels in Kyoto, read through guest reviews</h1>
+    <p class="dm-lede" id="takeaway">Treating every review as independent, a one-way ANOVA puts the ryokan and hotel rating gap at F = <b data-draw="cell" data-source="anova" data-field="F" data-where="test=oneway">—</b>. Tested against the seven properties those reviews come from, the same gap gives F = <b data-draw="cell" data-source="anova" data-field="F" data-where="test=nested">—</b>, p = <b data-draw="cell" data-source="anova" data-field="p" data-where="test=nested">—</b>.</p>
+    <p class="dm-note">Built from English-language TripAdvisor reviews of ten Kyoto properties: four ryokans, three luxury hotels and three hybrids. Point at any mark to read its values.</p>
+  </header>
+
+  <nav class="dm-tabs" role="tablist" aria-label="Views" id="tabs">
+    <button class="dm-tab" type="button" role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button class="dm-tab" type="button" role="tab" data-tab="narrate" aria-selected="false">What guests narrate</button>
+    <button class="dm-tab" type="button" role="tab" data-tab="satisfaction" aria-selected="false">Satisfaction</button>
+    <button class="dm-tab" type="button" role="tab" data-tab="place" aria-selected="false">Season, time and place</button>
+  </nav>
+
+  <!-- ===================== OVERVIEW ===================== -->
+  <div class="dm-view" id="overview" data-view>
+    <section class="dm-sec" id="anova">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Ratings and ANOVA</p><h2 class="dm-h2">Is the rating gap between accommodation types real?</h2></div>
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span><span><i class="dm-sw" data-type="Hybrid"></i>Hybrid</span></div>
+      </div>
+      <div class="dm-card" id="anova-chart">
+        <p class="dm-note">Mean star rating of each property, with its 95% confidence interval. The scale starts at 4.4 stars, not zero.</p>
+        <div class="dm-chart dm-h-dots" data-draw="propdots" data-source="properties"></div>
+      </div>
+      <p class="dm-read">Every version of the test that counts reviews one by one finds a significant difference. The nested version asks a harder question: is the gap between types larger than the gaps between properties of the same type? Two ryokans sit at the top of the chart and two sit among the hotels, so the answer is not clear-cut.</p>
+      <div class="dm-card" id="anova-table">
+        <div class="dm-tablewrap">
+          <table class="dm-table" data-source="anova" data-row-key="test">
+            <thead><tr>
+              <th data-field="label">Test</th>
+              <th data-field="groups">Groups compared</th>
+              <th data-field="F" class="dm-num">F</th>
+              <th data-field="df" class="dm-num">df</th>
+              <th data-field="p" class="dm-num">p</th>
+              <th data-field="eta2" class="dm-num">Variance explained</th>
+              <th data-field="verdict">Result</th>
+            </tr></thead>
+            <tbody data-draw="anovarows"></tbody>
+          </table>
+        </div>
+        <p class="dm-note">Star ratings are far from normally distributed and their spread differs between types, which is why the Welch and rank-based versions are shown beside the classical test.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== RQ1 ===================== -->
+  <div class="dm-view" id="narrate" data-view hidden>
+    <div class="dm-viewhead"><p class="dm-question">Research question 1. What experiential factors set ryokans apart from luxury hotels?</p></div>
+
+    <section class="dm-sec" id="aspects">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Property by aspect</p><h2 class="dm-h2">What each property's guests talk about</h2></div>
+        <div class="dm-controls"><label>Show <select class="dash-select" data-param="metric" aria-label="Aspect measure">
+          <option value="mention_share">Share of reviews mentioning the aspect</option>
+          <option value="positive_share">Share of mentions that are positive</option>
+          <option value="negative_share">Share of mentions that are negative</option>
+        </select></label></div>
+      </div>
+      <div class="dm-card" id="aspects-chart">
+        <p class="dm-note">Values are percentages. A darker cell is a higher value within the chosen measure.</p>
+        <div class="dm-chart dm-h-heat" data-draw="heat" data-source="aspects"></div>
+      </div>
+    </section>
+
+    <section class="dm-sec" id="perceptual">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Perceptual map</p><h2 class="dm-h2">Which properties are talked about in the same terms</h2></div>
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span><span><i class="dm-sw" data-type="Hybrid"></i>Hybrid</span><span><i class="dm-sw dm-sw-sq"></i>Aspect</span></div>
+      </div>
+      <div class="dm-card" id="perceptual-chart">
+        <div class="dm-chart dm-h-md" data-draw="pmap" data-source="perceptual"></div>
+        <p class="dm-note">Correspondence analysis of how often each property's reviews mention each aspect. Properties that lie close together are described in similar terms, and a property lies toward the aspects its guests mention more than average.</p>
+      </div>
+      <p class="dm-read">Along the main dimension, bath and culture sit at one end with the ryokans and the Nazuna properties. Location and value and price sit at the other end with Hyatt Regency and Park Hyatt. Four Seasons falls on the ryokan side of the center.</p>
+    </section>
+
+    <section class="dm-sec" id="vocabulary">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Distinctive vocabulary</p><h2 class="dm-h2">Words that every ryokan uses more than every hotel, and the reverse</h2></div>
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan reviews</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel reviews</span></div>
+      </div>
+      <div class="dm-card" id="vocabulary-chart">
+        <p class="dm-note">Share of reviews using the term, averaged across the properties of each type, in percent. The bar is the type named above it and the thin mark is the other type. Names of properties and terms tied to a single property are removed.</p>
+        <div class="dm-chart dm-h-md" data-draw="words" data-source="words"></div>
+      </div>
+    </section>
+
+    <section class="dm-sec" id="topics">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Topics</p><h2 class="dm-h2">Five themes found by the topic model, and how much of each type's reviews they fill</h2></div>
+        <div class="dm-controls"><label>Period <select class="dash-select" data-param="tperiod" aria-label="Period">
+          <option value="All years">All years</option>
+          <option value="2005-2019">2005 to 2019</option>
+          <option value="2020-2022">2020 to 2022</option>
+          <option value="2023-2026">2023 to 2026</option>
+        </select></label></div>
+      </div>
+      <div class="dm-card" id="topics-chart">
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span><span><i class="dm-sw" data-type="Hybrid"></i>Hybrid</span></div>
+        <div class="dm-chart dm-h-lg" data-draw="topics" data-source="topics"></div>
+        <p class="dm-note">Mean share of review content assigned to each topic, in percent. The words under each topic are its most probable terms.</p>
+      </div>
+      <p class="dm-read">Across all years, ryokan and hybrid reviews lean toward the memorable experience and the traditional stay. Hotel reviews lean toward transactions and problems, and toward location.</p>
+    </section>
+
+    <section class="dm-sec" id="together">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Aspects mentioned together</p><h2 class="dm-h2">Which aspects are praised or criticized in the same review</h2></div>
+        <div class="dm-controls">
+          <label>Type <select class="dash-select" data-param="ctype" aria-label="Accommodation type"><option value="Hotel">Hotels</option><option value="Ryokan">Ryokans</option></select></label>
+          <label>Mentions <select class="dash-select" data-param="cpol" aria-label="Kind of mention"><option value="neg">Criticised together</option><option value="pos">Praised together</option></select></label>
+        </div>
+      </div>
+      <div class="dm-card" id="together-chart">
+        <p class="dm-note">Lift: how many times more often two aspects appear together than chance would give. A value of 1 means no association. Pairs found in fewer than five reviews are left blank.</p>
+        <div class="dm-chart dm-h-co" data-draw="cooc" data-source="cooccurrence"></div>
+      </div>
+      <p class="dm-read">Complaints cluster. A hotel review that criticizes the staff is several times more likely to criticize dining or the room as well. Praise is spread evenly, with lifts close to one. Ryokans receive too few negative mentions for the same view to be reliable.</p>
+    </section>
+  </div>
+
+  <!-- ===================== RQ2 ===================== -->
+  <div class="dm-view" id="satisfaction" data-view hidden>
+    <div class="dm-viewhead">
+      <p class="dm-question">Research question 2. Which aspects of the stay go with satisfaction and dissatisfaction?</p>
+      <div class="dm-controls"><label>Sentiment measure <select class="dash-select" data-param="measure" aria-label="Sentiment measure">
+        <option value="vader">Lexicon (VADER)</option>
+        <option value="bert">Transformer (DistilBERT)</option>
+      </select></label></div>
+    </div>
+
+    <section class="dm-sec" id="rewards">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Rewards and penalties</p><h2 class="dm-h2">What a positive or a negative mention of each aspect does to the star rating</h2></div>
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span></div>
+      </div>
+      <div class="dm-card" id="rewards-chart">
+        <p class="dm-note">Change in stars, holding the property and the other aspects constant. Bars to the left of zero are penalties for a negative mention; bars to the right are rewards for a positive mention. Faded bars are not statistically significant.</p>
+        <div class="dm-chart dm-h-co" data-draw="rp" data-source="rewards"></div>
+      </div>
+      <p class="dm-read">In both types a negative mention of staff, room, dining or value costs far more than a positive mention earns. Culture is the exception, most clearly at hotels: it earns a reward, and no penalty could be detected in this sample, in which negative mentions of culture are rare.</p>
+    </section>
+
+    <section class="dm-sec" id="ipa">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Importance and performance</p><h2 class="dm-h2">Where each type should concentrate</h2></div>
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span></div>
+      </div>
+      <div class="dm-card" id="ipa-chart">
+        <p class="dm-note">Importance is the reward plus the size of the penalty, in stars. Performance is the share of mentions that are positive. Dashed lines mark each type's average, and the upper-left corner holds aspects that matter and perform below that average.</p>
+        <div class="dm-chart dm-h-dots" data-draw="ipa" data-source="rewards"></div>
+      </div>
+      <p class="dm-read">For ryokans, value and price falls in the upper-left corner with either sentiment measure: it matters, and it is the aspect guests are least positive about.</p>
+    </section>
+
+    <section class="dm-sec" id="complaints">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Complaint profile</p><h2 class="dm-h2">What reviews rated three stars or fewer complain about</h2></div>
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span></div>
+      </div>
+      <div class="dm-card" id="complaints-chart">
+        <p class="dm-note">Share of low-rated reviews with a negative mention of each aspect, in percent, scored with the lexicon. Based on <b data-draw="cell" data-source="complaints" data-field="n_low_rated" data-where="type=Ryokan&amp;aspect=Room">—</b> low-rated ryokan reviews and <b data-draw="cell" data-source="complaints" data-field="n_low_rated" data-where="type=Hotel&amp;aspect=Room">—</b> low-rated hotel reviews, so the ryokan bars are less certain.</p>
+        <div class="dm-chart dm-h-bars" data-draw="complaints" data-source="complaints"></div>
+      </div>
+    </section>
+
+    <section class="dm-sec" id="arc">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Narrative arc</p><h2 class="dm-h2">How sentiment moves from the first sentence of a review to the last</h2></div>
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span><span><i class="dm-sw" data-type="Hybrid"></i>Hybrid</span></div>
+      </div>
+      <div class="dm-card" id="arc-chart">
+        <div class="dm-chart dm-h-arc" data-draw="arc" data-source="arc"></div>
+        <p class="dm-note">Each review of five or more sentences is cut into five equal parts. The line is the mean sentence sentiment in each part, from −1 (negative) to +1 (positive).</p>
+      </div>
+      <p class="dm-read">With the transformer measure, hotel reviews open warmly, sag in the middle and later parts where problems are described, and recover in the closing lines, while ryokan reviews stay close to level. The lexicon measure shows the hotel dip more faintly.</p>
+    </section>
+  </div>
+
+  <!-- ===================== RQ3 ===================== -->
+  <div class="dm-view" id="place" data-view hidden>
+    <div class="dm-viewhead"><p class="dm-question">Research question 3. Do ratings hold up in peak season, over the years and near the crowds?</p></div>
+
+    <section class="dm-sec" id="season">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Season</p><h2 class="dm-h2">Ratings month by month</h2></div>
+        <div class="dm-controls"><label>Show <select class="dash-select" data-param="smetric" aria-label="Seasonal measure">
+          <option value="rating">Mean star rating</option>
+          <option value="low_share">Share rated three stars or fewer</option>
+        </select></label></div>
+      </div>
+      <div class="dm-card" id="season-chart">
+        <p class="dm-note">By the month a review was posted. Peak months, marked with a dot, are March, April, October and November. A darker cell is a higher value within the chosen measure.</p>
+        <div class="dm-chart dm-h-sm" data-draw="season" data-source="season"></div>
+      </div>
+      <p class="dm-read">The hotels' lowest month is April, in the cherry-blossom peak. Ryokans show no comparable dip in the peak months.</p>
+    </section>
+
+    <section class="dm-sec" id="trend">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Time</p><h2 class="dm-h2">Ratings year by year</h2></div>
+        <div class="dm-controls">
+          <label>Show <select class="dash-select" data-param="tmetric" aria-label="Yearly measure"><option value="rating">Mean star rating</option><option value="low_share">Share rated three stars or fewer</option></select></label>
+          <label>Highlight <select class="dash-select" data-param="tprop" aria-label="Property to highlight">
+            <option value="">No single property</option>
+            <option value="Shiraume">Shiraume</option><option value="Muromachi Yutone">Muromachi Yutone</option><option value="Ryokufuso">Ryokufuso</option><option value="Nishiyama Ryokan">Nishiyama Ryokan</option>
+            <option value="Hyatt Regency Kyoto">Hyatt Regency Kyoto</option><option value="Four Seasons Kyoto">Four Seasons Kyoto</option><option value="Park Hyatt Kyoto">Park Hyatt Kyoto</option>
+            <option value="Nazuna Gosho">Nazuna Gosho</option><option value="Nazuna Nijo-jo">Nazuna Nijo-jo</option><option value="The Junei Hotel">The Junei Hotel</option>
+          </select></label>
+        </div>
+      </div>
+      <div class="dm-card" id="trend-chart">
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span><span><i class="dm-sw" data-type="Hybrid"></i>Hybrid</span></div>
+        <div class="dm-chart dm-h-md" data-draw="trend" data-source="trend"></div>
+        <p class="dm-note">Years with fewer than ten reviews are left out. The shaded band marks 2020 to 2022, when travel was restricted and few reviews were posted.</p>
+      </div>
+      <p class="dm-read">Ryokan ratings have risen over the period, while hotel ratings have stayed level.</p>
+    </section>
+
+    <section class="dm-sec" id="map">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Place</p><h2 class="dm-h2">Where the ten properties stand among Kyoto's busiest sights</h2></div>
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span><span><i class="dm-sw" data-type="Hybrid"></i>Hybrid</span><span><i class="dm-sw dm-sw-sq"></i>Busy sight</span></div>
+      </div>
+      <div class="dm-card" id="map-chart">
+        <div class="dm-chart dm-h-lg" data-draw="kmap" data-source="locations hotspots"></div>
+        <p class="dm-note">A schematic, not a street map. Dashed rings mark one kilometer around Kiyomizu-dera and Yasaka Shrine. Busy sights stand for the areas covered by the Kyoto City Tourism Association's congestion forecast; the sight chosen for each area is the author's. Coordinates from Google Maps; the river is drawn approximately.</p>
+      </div>
+      <p class="dm-read">All three hotels stand in Higashiyama, close to the Gion and Kiyomizu area, and the three hybrid properties are the furthest from it. Location and accommodation type are therefore hard to separate in this sample.</p>
+    </section>
+
+    <section class="dm-sec" id="distance">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Place and ratings</p><h2 class="dm-h2">Does distance from the crowds go with what guests say?</h2></div>
+        <div class="dm-controls">
+          <label>Across <select class="dash-select" data-param="lx" aria-label="Distance measure">
+            <option value="dist_gion_kiyomizu_m">Distance to Gion / Kiyomizu</option>
+            <option value="dist_nearest_m">Distance to nearest busy sight</option>
+            <option value="dist_station_m">Distance to Kyoto Station</option>
+          </select></label>
+          <label>Up <select class="dash-select" data-param="ly" aria-label="Outcome">
+            <option value="mean">Mean rating</option>
+            <option value="low_share">Share rated three stars or fewer</option>
+            <option value="location_positive">Positive share of location mentions</option>
+            <option value="location_negative">Negative share of location mentions</option>
+            <option value="crowd_exposed">Reviews describing crowds</option>
+            <option value="peak_effect">Peak-season change in rating</option>
+          </select></label>
+        </div>
+      </div>
+      <div class="dm-card" id="distance-chart">
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span><span><i class="dm-sw" data-type="Hybrid"></i>Hybrid</span></div>
+        <div class="dm-chart dm-h-md" data-draw="locscatter" data-source="locations location_tests"></div>
+        <p class="dm-note">Each dot is one property. Distances are straight lines in kilometers. The rank correlation and its permutation p-value are printed in the chart. With ten properties, only a very strong relationship can be told from chance.</p>
+      </div>
+      <p class="dm-read">Mean rating shows no reliable relationship with any of the three distances. The clearest pattern is a different one, shown below.</p>
+    </section>
+
+    <section class="dm-sec" id="crowding">
+      <div class="dm-sec-head">
+        <div><p class="dm-kicker">Crowding in the reviews</p><h2 class="dm-h2">How often guests describe crowds, queues or busyness</h2></div>
+        <div class="dm-controls"><label>Compare <select class="dash-select" data-param="csplit" aria-label="Comparison"><option value="season">Peak months and other months</option><option value="period">Periods</option></select></label></div>
+      </div>
+      <div class="dm-card" id="crowding-chart">
+        <div class="dm-legend" aria-hidden="true"><span><i class="dm-sw" data-type="Ryokan"></i>Ryokan</span><span><i class="dm-sw" data-type="Hotel"></i>Hotel</span><span><i class="dm-sw" data-type="Hybrid"></i>Hybrid</span></div>
+        <div class="dm-chart dm-h-cr" data-draw="crowd" data-source="crowd"></div>
+        <p class="dm-note">Share of reviews with a sentence that describes crowding, in percent, found with a keyword list. The list has not been checked by hand and also catches some unrelated uses of words such as "busy". Sentences that describe an escape from crowds are not counted.</p>
+      </div>
+      <p class="dm-read">Every hotel has a higher share than every ryokan, including Shiraume, which stands in the middle of Gion. Talk of crowding follows the kind of property more than its address.</p>
+    </section>
+  </div>
+
+  <details class="dm-details" id="notes">
+    <summary>How these figures were made</summary>
+    <p>Sentiment is scored sentence by sentence with two measures: a lexicon (VADER) and a transformer classifier (DistilBERT). A mention of an aspect is positive when the mean score of the sentences naming it is at least +0.05 and negative when it is at most −0.05. Aspects are found with a fixed word list.</p>
+    <p>The nested ANOVA compares the two types using the four ryokans and three hotels as the units, which leaves five degrees of freedom. The hybrid properties are shown in the charts and left out of that test. The two-way ANOVA treats reviews as independent; the mixed-effects model in the thesis, which respects the nesting, puts the same interaction at p = 0.070.</p>
+    <p>Rewards and penalties come from a regression of the star rating on positive and negative mentions of the seven aspects, with review length and property fixed effects, fitted separately for ryokans and hotels.</p>
+    <p>Topics come from Latent Dirichlet Allocation with five topics, after property names and property-specific vocabulary were removed.</p>
+  </details>
+</div>
+
+<script src="core.js"></script>
+<script src="rq1.js"></script>
+<script src="rq2.js"></script>
+<script src="rq3.js"></script>

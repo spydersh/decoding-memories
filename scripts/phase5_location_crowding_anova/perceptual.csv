@@ -1,0 +1,18 @@
+kind,label,type,dim1,dim2,inertia1,inertia2
+property,Muromachi Yutone,Ryokan,-0.2861,-0.1086,77.2,11.6
+property,Nishiyama Ryokan,Ryokan,-0.1882,0.0401,77.2,11.6
+property,Ryokufuso,Ryokan,-0.2078,0.1608,77.2,11.6
+property,Shiraume,Ryokan,-0.0542,-0.1125,77.2,11.6
+property,Nazuna Gosho,Hybrid,-0.2626,-0.0227,77.2,11.6
+property,Nazuna Nijo-jo,Hybrid,-0.2584,-0.0634,77.2,11.6
+property,Four Seasons Kyoto,Hotel,-0.1276,-0.0157,77.2,11.6
+property,Hyatt Regency Kyoto,Hotel,0.1841,0.0114,77.2,11.6
+property,Park Hyatt Kyoto,Hotel,0.1352,0.0066,77.2,11.6
+property,The Junei Hotel,Hybrid,-0.1294,0.091,77.2,11.6
+aspect,Staff & service,,0.0172,-0.0003,77.2,11.6
+aspect,Room,,0.0491,0.0404,77.2,11.6
+aspect,Dining,,0.0138,-0.106,77.2,11.6
+aspect,Location,,0.1946,0.0501,77.2,11.6
+aspect,Culture,,-0.2785,-0.0738,77.2,11.6
+aspect,Bath,,-0.401,0.1279,77.2,11.6
+aspect,Value & price,,0.2272,0.0182,77.2,11.6

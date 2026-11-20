@@ -1,0 +1,69 @@
+share of core reviews by property:
+prop
+Hyatt Regency Kyoto           0.451
+Shiraume                      0.140
+Four Seasons Hotl Kyoto       0.132
+Nishiyama Ryokan              0.101
+Ryokufuso                     0.077
+Parkhyatt                     0.066
+Kyokoyado Muromachi Yutone    0.032
+rec
+   without Shiraume                     staff OR 1.40 (1.14, 1.72) p=0.001 | room OR 0.86 p=0.068 | contrast p=0.0003
+   without Parkhyatt                    staff OR 1.46 (1.20, 1.78) p=0.000 | room OR 0.86 p=0.068 | contrast p=0.0001
+   without Four Seasons Hotl Kyoto      staff OR 1.36 (1.11, 1.67) p=0.003 | room OR 0.87 p=0.092 | contrast p=0.0009
+   without Hyatt Regency Kyoto          staff OR 1.15 (0.90, 1.46) p=0.270 | room OR 0.89 p=0.235 | contrast p=0.1184
+   without Kyokoyado Muromachi Yutone   staff OR 1.41 (1.16, 1.72) p=0.001 | room OR 0.87 p=0.082 | contrast p=0.0002
+   without Nishiyama Ryokan             staff OR 1.37 (1.12, 1.67) p=0.002 | room OR 0.86 p=0.060 | contrast p=0.0005
+   without Ryokufuso                    staff OR 1.38 (1.13, 1.67) p=0.001 | room OR 0.89 p=0.156 | contrast p=0.0009
+   Ryokan: staff OR 1.20 (0.89, 1.63) p=0.228; room OR 0.88 p=0.292
+   Hotel: staff OR 1.49 (1.17, 1.90) p=0.001; room OR 0.86 p=0.143
+mem
+   without Shiraume                     staff OR 1.89 (1.17, 3.06) p=0.009 | room OR 0.68 p=0.021 | contrast p=0.0011
+   without Parkhyatt                    staff OR 1.46 (1.02, 2.09) p=0.037 | room OR 0.62 p=0.000 | contrast p=0.0002
+   without Four Seasons Hotl Kyoto      staff OR 1.55 (1.08, 2.24) p=0.018 | room OR 0.66 p=0.002 | contrast p=0.0002
+   without Hyatt Regency Kyoto          staff OR 1.42 (0.99, 2.04) p=0.058 | room OR 0.67 p=0.004 | contrast p=0.0017
+   without Kyokoyado Muromachi Yutone   staff OR 1.49 (1.06, 2.10) p=0.021 | room OR 0.63 p=0.000 | contrast p=0.0001
+   without Nishiyama Ryokan             staff OR 1.42 (1.01, 1.99) p=0.045 | room OR 0.64 p=0.001 | contrast p=0.0004
+   without Ryokufuso                    staff OR 1.49 (1.06, 2.09) p=0.020 | room OR 0.63 p=0.000 | contrast p=0.0001
+   Ryokan: staff OR 1.39 (0.89, 2.15) p=0.145; room OR 0.69 p=0.025
+   Hotel: staff OR 1.66 (0.99, 2.78) p=0.054; room OR 0.60 p=0.007
+rec dining: 1.21 (1.04-1.40)*; bath: 1.05 (0.90-1.23); room: 0.87 (0.75-1.01); staff_service: 1.37 (1.13-1.65)*; location: 1.07 (0.93-1.23); value_price: 0.97 (0.82-1.14); culture: 1.12 (0.97-1.29)
+mem dining: 0.85 (0.66-1.10); bath: 0.80 (0.61-1.05); room: 0.64 (0.50-0.82)*; staff_service: 1.51 (1.08-2.10)*; location: 0.73 (0.57-0.92)*; value_price: 0.76 (0.57-1.02); culture: 1.14 (0.90-1.44)
+ret dining: 1.04 (0.86-1.24); bath: 1.17 (0.96-1.42); room: 1.08 (0.89-1.31); staff_service: 1.10 (0.87-1.37); location: 1.02 (0.86-1.21); value_price: 0.74 (0.60-0.92)*; culture: 0.86 (0.72-1.03)
+culture x type (only this interaction): -0.119 (-0.184, -0.053) p=0.0004
+   reward x type for dining: -0.149 (-0.222, -0.077) p=0.0001
+   reward x type for staff_service: -0.105 (-0.209, -0.000) p=0.0500
+   reward x type for room: -0.071 (-0.143, +0.000) p=0.0514
+   reward x type for culture: -0.119 (-0.184, -0.053) p=0.0004
+   reward x type for bath: -0.086 (-0.158, -0.014) p=0.0201
+   reward x type for location: -0.094 (-0.158, -0.030) p=0.0042
+Pooled dining: reward+penalty -0.30 p=0.000; bath: reward+penalty -0.13 p=0.230; room: reward+penalty -0.67 p=0.000; staff_service: reward+penalty -0.53 p=0.000; location: reward+penalty -0.12 p=0.131; value_price: reward+penalty -0.57 p=0.000; culture: reward+penalty +0.19 p=0.125 | adjR2 0.289 n=5588
+Ryokan dining: reward+penalty -0.49 p=0.004; bath: reward+penalty -0.06 p=0.708; room: reward+penalty -0.68 p=0.002; staff_service: reward+penalty -0.58 p=0.029; location: reward+penalty +0.04 p=0.726; value_price: reward+penalty -0.80 p=0.001; culture: reward+penalty +0.14 p=0.453 | adjR2 0.295 n=1958
+Hotel dining: reward+penalty -0.21 p=0.028; bath: reward+penalty -0.13 p=0.346; room: reward+penalty -0.64 p=0.000; staff_service: reward+penalty -0.48 p=0.000; location: reward+penalty -0.13 p=0.174; value_price: reward+penalty -0.51 p=0.000; culture: reward+penalty +0.24 p=0.135 | adjR2 0.274 n=3630
+staff-location reward 0.18393452104136837 3.735963512395622e-08
+                                      n  low  rec  mem  ret
+prop                       tier                            
+Four Seasons Hotl Kyoto    Hotel    739   79  142   59   72
+Hyatt Regency Kyoto        Hotel   2521  250  532   61  312
+Junei Hotel Kyoto          Hybrid   116    4   24   14   18
+Kyokoyado Muromachi Yutone Ryokan   181    0   57   11   33
+Nazuna Kyoto Gosho         Hybrid   165    1   55   14   34
+Nazuna Kyoto Nijojo        Hybrid   173    5   51   18   27
+Nishiyama Ryokan           Ryokan   565   38  185   23   74
+Parkhyatt                  Hotel    370   42   76   41   52
+Ryokufuso                  Ryokan   431   23  122   13   46
+Shiraume                   Ryokan   781    1  220  197  141
+overall shares: rec 0.242 ret 0.134 mem 0.075
+property-level type means rec/ret/mem range:
+                                     rec    ret    mem
+prop                       tier                       
+Four Seasons Hotl Kyoto    Hotel   0.192  0.097  0.080
+Hyatt Regency Kyoto        Hotel   0.211  0.124  0.024
+Junei Hotel Kyoto          Hybrid  0.207  0.155  0.121
+Kyokoyado Muromachi Yutone Ryokan  0.315  0.182  0.061
+Nazuna Kyoto Gosho         Hybrid  0.333  0.206  0.085
+Nazuna Kyoto Nijojo        Hybrid  0.295  0.156  0.104
+Nishiyama Ryokan           Ryokan  0.327  0.131  0.041
+Parkhyatt                  Hotel   0.205  0.141  0.111
+Ryokufuso                  Ryokan  0.283  0.107  0.030
+Shiraume                   Ryokan  0.282  0.181  0.252
